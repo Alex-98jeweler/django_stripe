@@ -4,5 +4,5 @@ from payments import views
 
 
 urlpatterns = [
-    path("buy/", views.checkout_session, )
+    path("buy/<item_id>/", views.checkout_session, )
 ]
