@@ -4,5 +4,5 @@ from items import views
 
 
 urlpatterns = [
-    path('item/<pk>/', views.ItemsView.as_view())
+    path('item/<int:pk>/', views.ItemsView.as_view())
 ]
