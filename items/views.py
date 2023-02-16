@@ -8,7 +8,7 @@ from .models import Items
 
 class ItemsView(views.View):
 
-    def get(request, pk):
+    def get(self,request, pk):
         item = Items.objects.get(pk=pk)
         context = {}
         context['name'] = item.name
