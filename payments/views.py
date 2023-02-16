@@ -16,7 +16,7 @@ def checkout_session(request, item_id):
         line_items=[
             {
             "price_data": {
-                "currency": "usd",
+                "currency": "rub",
                 "product_data": {"name": item.name},
                 "unit_amount": item.price,
             },
