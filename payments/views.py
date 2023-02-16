@@ -17,8 +17,8 @@ def checkout_session(request, item_id):
             {
             "price_data": {
                 "currency": "usd",
-                "product_data": {"name": "T-shirt"},
-                "unit_amount": 50,
+                "product_data": {"name": item.name},
+                "unit_amount": item.price,
             },
             "quantity": 1,
             },
@@ -27,5 +27,5 @@ def checkout_session(request, item_id):
         success_url='http://localhost:8000/success',
         cancel_url='http://localhost:8000/cancel',
     )
-    return Response({'session_id': session.url})
+    return Response(session.to_dict())
     
