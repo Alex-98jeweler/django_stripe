@@ -11,6 +11,7 @@ class ItemsView(views.View):
     def get(self,request, pk):
         item = Items.objects.get(pk=pk)
         context = {}
+        context['id'] = item.pk
         context['name'] = item.name
         context['description'] = item.description
         context['price'] = item.price
