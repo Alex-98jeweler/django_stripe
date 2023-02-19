@@ -22,6 +22,7 @@ class ItemsView(views.View):
 
 
 class ItemsList(generic.ListView):
-    paginate_by = 5
+    paginate_by = 2
     model = Items
     template_name = "item_list.html"
+    context_object_name = "item_list"
