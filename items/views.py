@@ -1,9 +1,12 @@
 from django.shortcuts import render
 from django import views
+from django.views import generic
 
 from .models import Items
 
 
+def index(request):
+    return render(request, 'index.html')
 
 
 class ItemsView(views.View):
@@ -16,3 +19,9 @@ class ItemsView(views.View):
         context['description'] = item.description
         context['price'] = item.price
         return render(request, 'item_detail.html', context)
+
+
+class ItemsList(generic.ListView):
+    paginate_by = 5
+    model = Items
+    template_name = "item_list.html"
