@@ -8,6 +8,11 @@ from .models import Items
 def index(request):
     return render(request, 'index.html')
 
+def success(request):
+    return render(request, 'success.html')
+
+def cancel(request):
+    return render(request, 'cancel.html')
 
 class ItemsView(views.View):
 
