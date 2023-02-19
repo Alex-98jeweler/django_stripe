@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django import views
 from django.views import generic
+from django.shortcuts import get_object_or_404
 
 from .models import Items
 
@@ -17,7 +18,7 @@ def cancel(request):
 class ItemsView(views.View):
 
     def get(self,request, pk):
-        item = Items.objects.get(pk=pk)
+        item = get_object_or_404(Items, pk=pk)
         context = {}
         context['id'] = item.pk
         context['name'] = item.name
