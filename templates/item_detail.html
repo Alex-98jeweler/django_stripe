@@ -10,7 +10,7 @@
     <p>price</p>
     <button id="buy-button">Buy</button>
     <script>
-        var stripe = Stripe('pk_test_51Mc0nMFyXrk3Jkxh3V1c3x1z61R5ndGzPjkAlpRTGznYvZtbmHIuxc6wV9pSyita1XaKntnhsLD6S6uX8F1OdHNN00FInt8btz');
+        var stripe = Stripe('{{stripe_publish}}');
         var buyButton = document.getElementById('buy-button');
         buyButton.addEventListener('click', function() {
         fetch('/buy/{{id}}', {method: 'GET'})
