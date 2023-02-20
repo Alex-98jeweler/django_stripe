@@ -1,7 +1,0 @@
-DB_NAME=django_stripe
-DB_USER=postgres
-DB_PASS=postgres
-DB_HOST=localhost
-DB_PORT=5432
-SECRET_KEY=very_secret31237921^^@%
-STRIPE_SECRET=sk_test_
